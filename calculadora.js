@@ -1,64 +1,51 @@
-# calculadora.js
+// calculadora.js
+
+// Para inserir o valor investido, substituir o valor '0.00' abaixo pelo valor investido;
+const valor = 0.00;
+
+// variáveis a serem calculadas
+let clickstotais = 0
+let viewstotais = viewsoriginal;
+let compartilhamentostotais = 0;
 
 
-function calculadora (valorinvest){
-  
-  var viewsoriginal = (valorinvest * 30);
-  var viewsatual = viewsoriginal
-  var viewstotal = viewsoriginal
-  var clickstotais = 0
-  var compartilhamentostotais = 0
 
-  
-  for(i=0;i<4;i++){
-   
-  var clicks = (viewsatual/8.33333);
-  var compartilhamento = (clicks/6.67);
-  var novasviews = (compartilhamento * 40);
-  viewsatual = novasviews
-  viewstotal = viewstotal + novasviews
-  clickstotais = clickstotais + clicks
-  compartilhamentostotais = compartilhamentostotais + compartilhamento
+// função de calculadora, calcula visualizações, compartilhamentos e clicks;
+export function calculadora(valor) {
+    const viewsoriginal = valor * 30;
+    let viewsatuais = viewsoriginal;
 
-  if(viewsatual = 0){
-    break
-  }
+    for (let i = 0; i < 4; i++) {
+        let clicks = viewsatuais / 8.33333;
+        let compartilhamento = clicks / 6.67;
+        let novasviews = compartilhamento * 40;
+        viewsatuais = novasviews;
+        viewstotais = viewstotais + novasviews;
+        clickstotais = clickstotais + clicks;
+        compartilhamentostotais = compartilhamentostotais + compartilhamento;
 
-  }
-  
-  var relatorio = viewstotal.toFixed(0) + ',' + clickstotais.toFixed(0) + ',' + compartilhamentostotais.toFixed(0)
-  
-  
-return String(relatorio)
+        if ((viewsatuais = 0)) {
+            break;
+        }
+    }
 
+
+    return;
 }
 
+//função calculadora chamada
+calculadora(valor);
 
-var valor = 50
-var relatorio = calculadora(valor)
-var relatoriosplit = relatorio.split(',')
-var viewstotais = relatoriosplit[0]
-var clickstotais = relatoriosplit[1]
-var compartilhamentostotais = relatoriosplit[2]
 
-if(valor < 0 ){
-
-  console.log("Insira um valor válido.")
-  
-}else{
-  console.log("O valor aproximado de visualizações é de " + viewstotais + " Para R$ " + valor.toFixed(2) + " investidos")
+//caso o valor inserido seja negativo, o sistema solicita a inserção de um valor válido
+if (valor < 0) {
+    console.log("Insira um valor válido.");
+} else {
+    console.log(
+        "O valor aproximado de visualizações é de " +
+        viewstotais +
+        " Para R$ " +
+        valor.toFixed(2) +
+        " investidos"
+    );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
