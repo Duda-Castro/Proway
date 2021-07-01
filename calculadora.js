@@ -1,7 +1,7 @@
 // calculadora.js
 
 // Para inserir o valor investido, substituir o valor '0.00' abaixo pelo valor investido;
-const valorinvest = 1000.00;
+const valorinvest = 0.00;
 
 // variáveis a serem calculadas
 let clickstotais = 0
@@ -21,12 +21,16 @@ function calculadora(valorinvest) {
         viewstotais = viewstotais + novasviews;
         clickstotais = clickstotais + clicks;
         compartilhamentostotais = compartilhamentostotais + compartilhamento;
-
-        
     }
+    relatorio =
+        viewstotais.toFixed(0) +
+        "," +
+        clickstotais.toFixed(0) +
+        "," +
+        compartilhamentostotais.toFixed(0);
 
+    return String(relatorio);
 
-    return;
 }
 
 //função calculadora chamada
