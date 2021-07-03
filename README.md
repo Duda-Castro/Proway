@@ -18,6 +18,6 @@ Para que o projeto seja executado, peço que seja feito download da dependencia 
 https://www.npmjs.com/package/prompt-sync
 
 ## Ambiente
-O projeto é executado através do terminal, sendo preciso que ao executálo com o comando no terminal ###`node nomedoarquivo.js` sejam 
+O projeto é executado através do terminal, sendo preciso que ao executálo com o comando no terminal `node nomedoarquivo.js` sejam 
 inseridos através do teclado, dados conforme as mensagens solicitam.
 
