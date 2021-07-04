@@ -9,10 +9,11 @@ Conforme as instruções da avaliação, disponibilizo aqui para download dois a
 - sistema_de_cadastros.js.
 
 ## Requerimentos
-Clone este repositório e faça download das dependências utilizando o seguinte comando npm no node.js:
-### `npm install`
 
-https://www.npmjs.com/
+Para que o sistema funcione é preciso que o [node.js](https://nodejs.org/en/download/) esteja instalado em sua máquina.
+
+Clone este repositório e faça download das dependências utilizando o seguinte comando:
+### `npm install`
 
 ## Ambiente
 O projeto é executado através do terminal, sendo preciso que, ao executar o código com o comando `node nomedoarquivo.js` no terminal os dados
