@@ -15,6 +15,6 @@ Clone este repositório e faça download das dependências utilizando o seguinte
 https://www.npmjs.com/
 
 ## Ambiente
-O projeto é executado através do terminal, sendo preciso que, ao executar com o comando no terminal `node nomedoarquivo.js` sejam 
-inseridos através do teclado, dados conforme as mensagens solicitam.
+O projeto é executado através do terminal, sendo preciso que, ao executar o código com o comando `node nomedoarquivo.js` no terminal os dados
+sejam inseridos através do teclado, conforme as mensagens solicitam. Desta forma é possivel realizar testes unitários no projeto.
 
