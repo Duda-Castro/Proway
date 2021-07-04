@@ -12,7 +12,7 @@ Conforme as instruções da avaliação, disponibilizo aqui para download dois a
 
 Para que o sistema funcione é preciso que o [node.js](https://nodejs.org/en/download/) esteja instalado em sua máquina.
 
-Clone este repositório e faça download das dependências utilizando o seguinte comando:
+Clone este repositório e faça download das dependências utilizando o seguinte comando no terminal:
 ### `npm install`
 
 ## Ambiente
