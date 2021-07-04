@@ -8,14 +8,11 @@ Conforme as instruções da avaliação, disponibilizo aqui para download dois a
 - calculadora.js.
 - sistema_de_cadastros.js.
 
-Para que o projeto seja executado de forma correta, disponibilizo também para download o arquivo .json.
-- package.json.
-
 ## Requerimentos
-Para que o projeto seja executado, peço que seja feito download da dependencia "prompt-sync" utilizando o seguinte comando npm no node.js:
-### `npm install prompt-sync`
+Clone este repositório e faça download das dependências utilizando o seguinte comando npm no node.js:
+### `npm install`
 
-https://www.npmjs.com/package/prompt-sync
+https://www.npmjs.com/
 
 ## Ambiente
 O projeto é executado através do terminal, sendo preciso que, ao executar com o comando no terminal `node nomedoarquivo.js` sejam 
