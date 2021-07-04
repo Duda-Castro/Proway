@@ -59,7 +59,7 @@ else if (inicializacao.toLowerCase() == "y") {
     let diffdias = diffhora / 24
 
     //Valor total investido.
-    let custototal = investdia * diffdias
+    let custototal = investdia * diffdias + 1;
     //Convocação da função calculadora.
     let relatorio = CALCULATOR(custototal)
     //Separação dos dados do relatório obtido através da função calculadora.
