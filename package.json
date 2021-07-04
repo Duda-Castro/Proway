@@ -1,0 +1,28 @@
+{
+  "name": "proway",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cadastro_de_anuncios.js",
+  "type": "module",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  },
+  "devDependencies": {
+    
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EduardoAnhaia/Proway.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EduardoAnhaia/Proway/issues"
+  },
+  "homepage": "https://github.com/EduardoAnhaia/Proway#readme"
+
+}
+
