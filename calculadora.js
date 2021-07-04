@@ -1,13 +1,12 @@
 //calculadora.js
-
-// Mensagem introdutória
+// Mensagem introdutória.
 console.log("Qual aplicação deseja iniciar? (calculadora/sistema de cadastro)")
 const enter = PromptSync()
 const inicio = enter()
 
-//importação da dependencia prompt-sync, para que o fornecimento de dados pelo teclado seja possível
+//Importação da dependencia prompt-sync, para que o fornecimento de dados pelo teclado seja possível.
 import PromptSync from "prompt-sync";
-//modularização e exportação da função calculadora, que também será usada no arquivo cadastro_de_anuncios.js
+//Modularização e exportação da função calculadora, que também será usada no arquivo cadastro_de_anuncios.js.
 export default function CALCULATOR(valorinvest) {
     const viewsoriginal = valorinvest * 30;
     let viewsatuais = viewsoriginal;
@@ -42,19 +41,19 @@ export default function CALCULATOR(valorinvest) {
 
 if(inicio.toLowerCase() == "calculadora"){
 
-//entrada do valor que será investido, para que uma projeção de alcance seja realizada
+//Entrada do valor que será investido, para que uma projeção de alcance seja realizada.
 console.log("Insira o valor a ser investido:")
 const entrada = PromptSync();
 let invest = parseFloat(entrada()).toFixed(2)
 
-//convocação da função calculadora
+//Convocação da função calculadora.
 let funccal = CALCULATOR(invest);
 let funccalsplit = funccal.split(',')
 
-//caso o valor inserido seja negativo, o sistema solicita a inserção de um valor válido
+//Caso o valor inserido seja negativo, o sistema solicita a inserção de um valor válido.
 if (invest < 0) {
     console.log("Insira um valor válido.");
-//caso o valor inserido seja positivo, a calculadora irá realizar a projeção    
+//Caso o valor inserido seja positivo, a calculadora irá realizar a projeção.    
 } else {
     console.log(
         "O valor aproximado de visualizações é de " +
