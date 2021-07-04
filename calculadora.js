@@ -29,9 +29,9 @@ export default function CALCULATOR(valorinvest) {
         clickstotais.toFixed(0) +
         "," +
         compartilhamentostotais.toFixed(0);
-        viewstotais= 0
-        clickstotais= 0
-        compartilhamentostotais = 0
+    viewstotais = 0
+    clickstotais = 0
+    compartilhamentostotais = 0
 
 
     return String(relatorio);
@@ -39,29 +39,29 @@ export default function CALCULATOR(valorinvest) {
 }
 
 
-if(inicio.toLowerCase() == "calculadora"){
+if (inicio.toLowerCase() == "calculadora") {
 
-//Entrada do valor que será investido, para que uma projeção de alcance seja realizada.
-console.log("Insira o valor a ser investido:")
-const entrada = PromptSync();
-let invest = parseFloat(entrada()).toFixed(2)
+    //Entrada do valor que será investido, para que uma projeção de alcance seja realizada.
+    console.log("Insira o valor a ser investido:")
+    const entrada = PromptSync();
+    let invest = parseFloat(entrada()).toFixed(2)
 
-//Convocação da função calculadora.
-let funccal = CALCULATOR(invest);
-let funccalsplit = funccal.split(',')
+    //Convocação da função calculadora.
+    let funccal = CALCULATOR(invest);
+    let funccalsplit = funccal.split(',')
 
-//Caso o valor inserido seja negativo, o sistema solicita a inserção de um valor válido.
-if (invest < 0) {
-    console.log("Insira um valor válido.");
-//Caso o valor inserido seja positivo, a calculadora irá realizar a projeção.    
-} else {
-    console.log(
-        "O valor aproximado de visualizações é de " +
-        funccalsplit.shift() +
-        " Para R$ " +
-        parseFloat(invest).toFixed(2) +
-        " investidos"
-    );
-}
-}else if(inicio.toLowerCase() == "sistema de cadastro"){}
+    //Caso o valor inserido seja negativo, o sistema solicita a inserção de um valor válido.
+    if (invest < 0) {
+        console.log("Insira um valor válido.");
+        //Caso o valor inserido seja positivo, a calculadora irá realizar a projeção.    
+    } else {
+        console.log(
+            "O valor aproximado de visualizações é de " +
+            funccalsplit.shift() +
+            " Para R$ " +
+            parseFloat(invest).toFixed(2) +
+            " investidos"
+        );
+    }
+} else if (inicio.toLowerCase() == "sistema de cadastro") { }
 
