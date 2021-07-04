@@ -1,6 +1,6 @@
 # Proway
 
-Este projeto foi feito com o intuito de participar do desafio de programação da Academia Capegimini através da empresa Proway.
+Este projeto foi feito com o intuito de participar do desafio de programação da Academia Capgemini através da empresa Proway.
 
 # Executando
 
