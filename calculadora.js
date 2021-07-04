@@ -1,17 +1,19 @@
-// calculadora.js
+//calculadora.js
 
-// Para inserir o valor investido, substituir o valor '0.00' abaixo pelo valor investido;
-const valorinvest = 0.00;
+// Mensagem introdutória
+console.log("Qual aplicação deseja iniciar? (calculadora/sistema de cadastro)")
+const enter = PromptSync()
+const inicio = enter()
 
-// variáveis a serem calculadas
-let clickstotais = 0
-let viewstotais = valorinvest * 30;
-let compartilhamentostotais = 0;
-
-// função de calculadora, calcula visualizações, compartilhamentos e clicks;
-function calculadora(valorinvest) {
+//importação da dependencia prompt-sync, para que o fornecimento de dados pelo teclado seja possível
+import PromptSync from "prompt-sync";
+//modularização e exportação da função calculadora, que também será usada no arquivo cadastro_de_anuncios.js
+export default function CALCULATOR(valorinvest) {
     const viewsoriginal = valorinvest * 30;
     let viewsatuais = viewsoriginal;
+    let clickstotais = 0
+    let compartilhamentostotais = 0;
+    let viewstotais = viewsoriginal
 
     for (let i = 1; i < 4; i++) {
         let clicks = viewsatuais / 8.33333;
@@ -22,30 +24,45 @@ function calculadora(valorinvest) {
         clickstotais = clickstotais + clicks;
         compartilhamentostotais = compartilhamentostotais + compartilhamento;
     }
-    relatorio =
+    let relatorio =
         viewstotais.toFixed(0) +
         "," +
         clickstotais.toFixed(0) +
         "," +
         compartilhamentostotais.toFixed(0);
+        viewstotais= 0
+        clickstotais= 0
+        compartilhamentostotais = 0
+
 
     return String(relatorio);
 
 }
 
-//função calculadora chamada
-calculadora(valorinvest);
 
+if(inicio.toLowerCase() == "calculadora"){
+
+//entrada do valor que será investido, para que uma projeção de alcance seja realizada
+console.log("Insira o valor a ser investido:")
+const entrada = PromptSync();
+let invest = parseFloat(entrada()).toFixed(2)
+
+//convocação da função calculadora
+let funccal = CALCULATOR(invest);
+let funccalsplit = funccal.split(',')
 
 //caso o valor inserido seja negativo, o sistema solicita a inserção de um valor válido
-if (valorinvest < 0) {
+if (invest < 0) {
     console.log("Insira um valor válido.");
+//caso o valor inserido seja positivo, a calculadora irá realizar a projeção    
 } else {
     console.log(
         "O valor aproximado de visualizações é de " +
-        viewstotais.toFixed(0) +
+        funccalsplit.shift() +
         " Para R$ " +
-        valorinvest.toFixed(2) +
+        parseFloat(invest).toFixed(2) +
         " investidos"
     );
 }
+}else if(inicio.toLowerCase() == "sistema de cadastro"){}
+
